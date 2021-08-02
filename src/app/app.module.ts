@@ -3,14 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { SidebarComponent } from './share/components/sidebar/sidebar.component';
+import { HeaderComponent } from './share/components/header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    LifecycleComponent,
+    SidebarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule   
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,18 @@
+@import "/src/styles.scss";
+$color-header: #1976d2;
+
+:host {
+    .header{
+        background-color: #1976d2;
+        height: 100%;
+        color: #ffffff;
+        .title{
+            font-family: "Roboto-Bold";
+            line-height: 40px;
+            margin-left: 30px;
+            font-size: 20px;
+        }
+    }
+
+
+}

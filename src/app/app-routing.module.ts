@@ -1,3 +1,4 @@
+import { DetectChangeComponent } from './detect-change/detect-change.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'lifecycle',
     component: LifecycleComponent,    
+  },
+  {
+    path: 'detectchange',
+    component: DetectChangeComponent
   }
 ];
 

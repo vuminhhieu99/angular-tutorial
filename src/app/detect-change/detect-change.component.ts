@@ -1,5 +1,7 @@
 import { Person } from './../share/models/Person';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+declare var $: any;
 
 @Component({
   selector: 'app-detect-change',
@@ -13,7 +15,10 @@ export class DetectChangeComponent implements OnInit {
     age: 20
   };
   public paramSinge: number = 0;
-  constructor() { }
+
+  public data$  = new BehaviorSubject(-1);
+ 
+  constructor(private cdf : ChangeDetectorRef) { }
 
   ngOnInit(): void {
   } 
@@ -24,5 +29,42 @@ export class DetectChangeComponent implements OnInit {
       age: this.person.age
     };
   }
+  addSingleParam(){
+    this.paramSinge++;
+  }
 
+  detectChange(e: any){    
+    this.setColorButton(e);
+    this.cdf.detectChanges();
+  }
+
+  detach(e: any){   
+    this.setColorButton(e);
+    this.cdf.detach();
+  }
+
+  reattach(e: any){   
+    this.setColorButton(e);
+    this.cdf.reattach();
+  }
+
+  markForCheck(e: any){    
+    this.setColorButton(e);
+    this.cdf.markForCheck();
+  }
+
+  setColorButton(e: any){
+    $(".container>div>button").css('background-color',"#17a2b8")
+    $(e.target).css('background-color','#007bff');
+  }
+
+  showValueConsole(){
+    console.log(JSON.stringify( this.person));
+    console.log(this.paramSinge);  
+     
+  }
+
+  streamOldParamSingle(){
+      this.data$.next(100);
+  }
 }

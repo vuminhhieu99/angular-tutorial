@@ -10,21 +10,27 @@ import { SidebarComponent } from './share/components/sidebar/sidebar.component';
 import { HeaderComponent } from './share/components/header/header.component';
 import { DetectChangeComponent } from './detect-change/detect-change.component';
 import { FormsModule } from '@angular/forms';
+import { DetectChangeChildChildComponent } from './detect-change/detect-change-child-child/detect-change-child-child.component';
+import { DetectChangeChild2Component } from './detect-change/detect-change-child2/detect-change-child2.component';
 
 @NgModule({
   declarations: [
-    AppComponent,    
+    AppComponent, 
     DashboardComponent,
     LifecycleComponent,
     SidebarComponent,
     HeaderComponent,
     DetectChangeComponent,
-    DetectChangeChildComponent  
+    DetectChangeChildComponent,
+    DetectChangeChildChildComponent,
+    DetectChangeChild2Component  
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule   
+    AppRoutingModule ,
+    FormsModule
+         
   ],
   providers: [],
   bootstrap: [AppComponent]

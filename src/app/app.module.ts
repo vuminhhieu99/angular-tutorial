@@ -12,6 +12,7 @@ import { DetectChangeComponent } from './detect-change/detect-change.component';
 import { FormsModule } from '@angular/forms';
 import { DetectChangeChildChildComponent } from './detect-change/detect-change-child-child/detect-change-child-child.component';
 import { DetectChangeChild2Component } from './detect-change/detect-change-child2/detect-change-child2.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DetectChangeChild2Component } from './detect-change/detect-change-child
   imports: [
     BrowserModule,
     AppRoutingModule ,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
          
   ],
   providers: [],

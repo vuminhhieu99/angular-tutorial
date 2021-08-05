@@ -36,4 +36,16 @@ body{
     margin: 0; 
 }
 
+button{
+    background-color: #17a2b8;
+    color: #fff;
+    border: 1px solid;
+    &:hover{
+        background-color:#138496 ;
+        cursor: pointer;
+    }
+  }
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

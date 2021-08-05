@@ -1,0 +1,23 @@
+<div class="child-container">
+  Name: <input type='text' [(ngModel)]="person.name">
+	<br /> Age:
+	<button (click)="person.age = person.age+1">+</button> {{ person.age }}
+	<button (click)="person.age = person.age-1">-</button>
+	<br />	
+	<pre>{{ person | json}}</pre>
+	<p>{{paramSinge}}</p>
+	<div>value change <input type="number" [(ngModel)]="paramSinge" ></div>
+  <p>{{oldParamSinge}}</p>
+	<div>value change <input type="number" [(ngModel)]="oldParamSinge" ></div>
+    <nav>detect for: 
+      <button (click)="detectChange($event)">detectChange</button>
+      <button (click)="detach($event)">detach</button>
+      <button (click)="reattach($event)">reattach</button>
+      <button (click)="markForCheck($event)">markForCheck</button>
+      <button (click)="showValueConsole()">show value</button>
+      <button (click)="setValueOldParamSingle(50)">set vlue old param single = 50</button>
+    </nav>
+    <app-detect-change-child-child [name]="person.name" [paramSinge]="paramSinge"></app-detect-change-child-child>
+
+    <!-- <app-detect-change-child-child [person]="person" ></app-detect-change-child-child> -->
+  </div>

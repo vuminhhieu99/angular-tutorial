@@ -1,3 +1,4 @@
+import { LifecycleChildComponent } from './lifecycle/lifecycle-child/lifecycle-child.component';
 import { DetectChangeChildComponent } from './detect-change/detect-change-child/detect-change-child.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -24,15 +25,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DetectChangeComponent,
     DetectChangeChildComponent,
     DetectChangeChildChildComponent,
-    DetectChangeChild2Component  
-    
+    DetectChangeChild2Component,
+    LifecycleChildComponent     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule ,
     FormsModule,
     BrowserAnimationsModule
-         
   ],
   providers: [],
   bootstrap: [AppComponent]

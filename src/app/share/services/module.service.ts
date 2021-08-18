@@ -8,7 +8,7 @@ export class ModuleService {
 
    moduleUrl ='api/heroes';
   constructor() {   
-   }
+   }    
   
   getModuler(): Observable<any>{
     const modules = of(Modules);

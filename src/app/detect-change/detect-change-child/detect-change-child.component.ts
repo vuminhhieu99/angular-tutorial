@@ -22,7 +22,7 @@ export class DetectChangeChildComponent implements OnInit {
   constructor(private cdf: ChangeDetectorRef) { }
 
   ngOnInit(): void {
-    this.data.subscribe(data => {this.oldParamSinge = data;}) // không render lại dom
+    // this.data.subscribe(data => {this.oldParamSinge = data;}) // không render lại dom
     this.data.subscribe(data => {
       this.oldParamSinge = data;
       this.cdf.markForCheck(); // render lại được

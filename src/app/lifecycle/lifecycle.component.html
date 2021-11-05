@@ -11,6 +11,7 @@
 	<div>{{paramSinge}}</div>
 	<div>value change <input type="number" [(ngModel)]="paramSinge"></div>
 	<button (click)="addSingleParam()">+</button>
+	<button (click)="createObj()">ChangeObj</button>
 	<div>
 		<app-lifecycle-child [person]="person" [paramSinge]="paramSinge">
 			</app-lifecycle-child>

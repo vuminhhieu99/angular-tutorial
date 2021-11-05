@@ -82,4 +82,9 @@ export class LifecycleComponent implements OnInit, AfterContentChecked, AfterCon
     // this.paramSinge++;
     this.showValueConsole();    
   }
+
+  createObj(){
+    this.person = {  name: 'John hieu',
+    age: 21};
+  }
 }

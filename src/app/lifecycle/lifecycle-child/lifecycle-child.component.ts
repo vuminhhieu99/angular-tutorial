@@ -2,7 +2,7 @@ import { Person } from './../../share/models/Person';
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, NgZone, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { PersonService } from 'src/app/share/services/person.service';
 import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { delay, startWith, takeUntil } from 'rxjs/operators';
 import { baseFunction } from 'src/app/share/functions/baseFunction';
 
 @Component({
@@ -26,14 +26,13 @@ export class LifecycleChildComponent implements OnInit, OnDestroy {
     // this.person.name =  this.person.name + " + OnInit";
     // this.paramSinge++;
     const me = this;
-    console.log("ngOnInit: -c->");
-    this.personService.data.pipe(takeUntil(this._unDestroy)).subscribe(data => {
-     
+    console.log("ngOnInit: -c->");       
+    this.personService.data.pipe(takeUntil(this._unDestroy), startWith({name: '123123123',  age: 0 }), delay(5000)).subscribe(data => {
         me.person.name = data.name;
         me.person.age = data.age;
-
-    
+        this.showValueConsole();
     });
+    this.noneParam = "sjdiof";
     this.showValueConsole();
   }
 
@@ -78,8 +77,12 @@ export class LifecycleChildComponent implements OnInit, OnDestroy {
     // this.zone.runOutsideAngular(() => {   
       // this.person.age =  this.person.age + 1;
       // this.paramSinge++;
-      this.personService.data.next({name: "one name", age: 45});
-      // this.zone.run(()=>{;});
+      this.noneParam = "dsafasd";
+      setTimeout(() => {
+        this.personService.data.next({name: "one name", age: 45});  
+      })
+      
+    //   this.zone.run(()=>{;});
     // });
     // this.cdf.detach();
     // this.person.name =  this.person.name + " + afterViewInit";

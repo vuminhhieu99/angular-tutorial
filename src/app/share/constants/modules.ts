@@ -2,6 +2,8 @@
 export const Modules =[
     "dashboard",
     "lifecycle",
-    "detectchange"
+    "detectchange",
+    "local-storage",
+    "observable"
 ]
     

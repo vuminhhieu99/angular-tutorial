@@ -3,6 +3,8 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LocalStorageComponent } from './local-storage/local-storage.component';
+import { ObservableComponent } from './observable/observable.component';
 
 const routes: Routes = [
   {
@@ -21,6 +23,14 @@ const routes: Routes = [
   {
     path: 'detectchange',
     component: DetectChangeComponent
+  },
+  {
+    path: 'local-storage',
+    component: LocalStorageComponent,
+  },
+  {
+    path: 'observable',
+    component: ObservableComponent,
   }
 ];
 

@@ -14,6 +14,7 @@ export class LifecycleComponent implements OnInit, AfterContentChecked, AfterCon
     age: 20
   };
   public paramSinge: number = 0;
+  public noneParam1 : string ="";
 
   constructor(private cdf : ChangeDetectorRef) { }
 
@@ -72,6 +73,7 @@ export class LifecycleComponent implements OnInit, AfterContentChecked, AfterCon
     console.log("ngAfterViewInit -p:");
     // this.person.name =  this.person.name + " + (afterViewInit)";
     // this.paramSinge++;
+    this.noneParam1 = "DSFASD";
     this.showValueConsole();    
 
   }

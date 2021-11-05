@@ -14,6 +14,8 @@ import { FormsModule } from '@angular/forms';
 import { DetectChangeChildChildComponent } from './detect-change/detect-change-child-child/detect-change-child-child.component';
 import { DetectChangeChild2Component } from './detect-change/detect-change-child2/detect-change-child2.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LocalStorageComponent } from './local-storage/local-storage.component';
+import { ObservableComponent } from './observable/observable.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DetectChangeChildComponent,
     DetectChangeChildChildComponent,
     DetectChangeChild2Component,
-    LifecycleChildComponent     
+    LifecycleChildComponent,
+    LocalStorageComponent,
+    ObservableComponent     
   ],
   imports: [
     BrowserModule,

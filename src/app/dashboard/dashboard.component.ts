@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  @HostBinding('style.color') 
+  @Input() bgColorKey = 'blue';
+  @HostBinding('class.foo') foo = true;
   constructor() { }
 
   ngOnInit(): void {
